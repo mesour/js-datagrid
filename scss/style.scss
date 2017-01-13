@@ -1,0 +1,406 @@
+//colors
+$color_alto_approx: #ddd;
+$white: #fff;
+$color_steel_blue_approx: #337ab7;
+$color_quarter_spanish_white_approx: #f9eee2;
+$color_persian_red_approx: #c9302c;
+$color_celeste_approx: #ccc;
+$color_bon_jour_approx: #dfdfdf;
+$color_gin_fizz_approx: #fffadf;
+$color_baja_white_approx: #fff8d2;
+$color_egg_white_approx: #fff5bf;
+$color_tapa_approx: #747474;
+
+%extend_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $color_steel_blue_approx;
+  margin-left: 0;
+  border-bottom: 2px solid $color_alto_approx;
+  background: $white;
+  padding: 10px 10px 5px 10px;
+  white-space: nowrap;
+}
+
+%extend_2 {
+  display: inline-block;
+  padding-left: 5px;
+  color: $color_persian_red_approx;
+}
+
+.mesour-datagrid {
+  .mesour-select-checkbox, .mesour-main-checkbox {
+    padding: 2px;
+    &.btn-indeterminate {
+      padding: 2px;
+    }
+  }
+  .mesour-datagrid-filter .mesour-filter {
+    margin-bottom: 15px;
+  }
+  table {
+    th {
+      .right-tools .dropdown.mesour-filter-dropdown button {
+        min-width: inherit;
+      }
+      .dropdown.mesour-filter-dropdown {
+        > button {
+          min-width: 100px;
+        }
+        &.active-checkers > button {
+          border-color: $color_persian_red_approx;
+          > [data-filter-icon="check"] {
+            color: $color_persian_red_approx;
+          }
+        }
+        &.active-item > button {
+          border-color: $color_persian_red_approx;
+          > [data-filter-icon="check"] + span {
+            color: $color_persian_red_approx;
+          }
+        }
+      }
+      &.column-status .dropdown.mesour-filter-dropdown > button {
+        min-width: inherit;
+        min-width: inherit;
+      }
+    }
+    > thead > tr {
+      > th {
+        position: relative;
+        border-right: 1px solid $color_alto_approx;
+        background: $white;
+        height: 42px;
+        padding: 6px 8px;
+        > span {
+          color: $color_steel_blue_approx;
+        }
+        &.sortable-column {
+          width: 1%;
+          white-space: nowrap;
+        }
+        &.act-select {
+          width: 1%;
+          white-space: nowrap;
+        }
+        &.column-status {
+          width: 1%;
+          white-space: nowrap;
+        }
+        &:last-child {
+          border-right: none;
+        }
+        > .grid-move:first-child {
+          padding-left: 8px;
+          height: 30px;
+          color: $color_steel_blue_approx;
+          padding-top: 8px;
+        }
+      }
+      > th[data-with-filter] {
+        height: 74px;
+      }
+    }
+    > tbody > tr > td {
+      border-right: 1px solid $color_alto_approx;
+      padding: 6px 8px;
+      vertical-align: middle;
+      &.actions-column {
+        width: 1%;
+        white-space: nowrap;
+      }
+      &.button-component {
+        width: 1%;
+        white-space: nowrap;
+      }
+      &.subgrid-button {
+        vertical-align: top;
+      }
+      .btn-sm {
+        padding: 4px 8px 6px;
+        font-size: 13px;
+        line-height: 1;
+        border-radius: 3px;
+        &.btn-sm-grid {
+          padding: 4px 9px;
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+      &.grid-sortable {
+        vertical-align: middle;
+      }
+      &.grid-checkbox {
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    td.button-component {
+      text-align: center;
+    }
+  }
+  table[data-mesour-enabled-filter="1"] {
+    .full-reset {
+      float: right;
+    }
+    > thead > tr > th {
+      background: $color_quarter_spanish_white_approx;
+      > a:first-child {
+        @extend %extend_1;
+      }
+      > span:first-child {
+        @extend %extend_1;
+      }
+      > .grid-move:first-child {
+        padding-left: 16px;
+        height: 37px;
+        color: $color_steel_blue_approx;
+        padding-top: 12px;
+      }
+    }
+    .column-container .full-reset {
+      float: none;
+    }
+  }
+  .container-content {
+    display: inline-block;
+    > span {
+      display: inline-block;
+    }
+  }
+  .status-buttons {
+    display: inline-block;
+  }
+  .table {
+    margin-bottom: 10px;
+  }
+  .act-select {
+    vertical-align: top;
+    text-align: center;
+  }
+  .column-container {
+    text-align: center;
+  }
+  .placeholder {
+    border: 0;
+    background: $color_tapa_approx !important;
+    border-radius: 0;
+    > .container-content > span {
+      display: inline-block;
+    }
+  }
+  .empty-data {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .show-export {
+    float: right;
+  }
+  .selection-dropdown {
+    float: left;
+  }
+  .mesour-clear {
+    border: none;
+    width: 100%;
+    background: transparent;
+    clear: both;
+  }
+  tr.checked {
+    td {
+      background-color: $color_gin_fizz_approx;
+    }
+    &:nth-child(odd) td {
+      background-color: $color_baja_white_approx;
+    }
+  }
+  td.table-striped > tbody > tr.placeholder td {
+    background: $color_egg_white_approx;
+  }
+  .selection-dropdown[data-name] > button:first-child {
+    padding: 0 7px 0 0;
+    color: $color_steel_blue_approx;
+    border-color: $color_steel_blue_approx;
+    > a:first-child {
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      border-color: $color_steel_blue_approx;
+      margin-right: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.mesour-datagrid-list {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+  }
+}
+
+.ordering {
+  .order-asc {
+    @extend %extend_2;
+    display: none;
+  }
+  .no-sort {
+    @extend %extend_2;
+    color: $color_celeste_approx;
+  }
+  .order-desc {
+    @extend %extend_2;
+    display: none;
+  }
+  &.asc {
+    .no-sort {
+      display: none;
+    }
+    &:hover {
+      .order-asc {
+        display: none;
+      }
+      .order-desc {
+        display: inline-block;
+      }
+    }
+    .order-asc {
+      display: inline-block;
+    }
+  }
+  &.desc {
+    .no-sort {
+      display: none;
+    }
+    .order-desc {
+      display: inline-block;
+    }
+    &:hover {
+      .order-asc {
+        display: none;
+      }
+      .order-desc {
+        display: none;
+      }
+      .no-sort {
+        display: inline-block;
+      }
+    }
+  }
+  &:hover {
+    .no-sort {
+      display: none;
+    }
+    .order-asc {
+      display: inline-block;
+    }
+  }
+}
+
+.mesour-datagrid-pager {
+  text-align: center;
+  clear: both;
+  padding-bottom: 10px;
+  > div {
+    border-radius: 5px;
+    &.row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  .input-group {
+    padding-top: 10px;
+  }
+  .row-count {
+    border-left: none;
+  }
+  .form-control {
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 10px;
+    float: right;
+    border-right: 1px solid $color_bon_jour_approx;
+    min-width: 35px;
+    + span {
+      padding-left: 0;
+      padding-right: 10px;
+      border-left: none;
+    }
+  }
+  .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  + .selection-dropdown {
+    top: -54px;
+  }
+  nav ul.pagination {
+    margin: 10px 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .mesour-datagrid-pager .col-xs-12 {
+    width: 100%;
+    padding-right: 10px;
+    .input-group {
+      float: none;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 10px;
+      .form-control {
+      }
+    }
+  }
+}
+
+@media(max-width: 990px) {
+  .mesour-datagrid-pager .col-xs-12 {
+    width: 100%;
+    .input-group {
+      float: none;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 10px;
+      .form-control {
+      }
+    }
+  }
+}
+
+@media(max-width: 638px) {
+  .mesour-datagrid-pager .col-xs-12 {
+    width: 100%;
+    .input-group {
+      float: none;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+    .pagination li {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr.checked:hover {
+  background-color: $color_egg_white_approx;
+  td {
+    background-color: $color_egg_white_approx;
+  }
+}
+
+tr.placeholder > td {
+  border: 0;
+  background: $color_tapa_approx !important;
+  border-radius: 0;
+}
