@@ -1,6 +1,6 @@
 {
   "name": "mesour-datagrid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mesour datagrid component",
   "main": "index.js",
   "devDependencies": {

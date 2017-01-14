@@ -19,7 +19,10 @@ export default class DataGridEditable
 					let element = _this.getEditableElement($current);
 					let value = _this.getEditableValue($current);
 
-					mesour.editable.getComponent(componentName).edit(element.name, element.element, element.id, value);
+					if (!mesour.editable.getComponent(componentName).openedEdits[element.name]) {
+						mesour.editable.getComponent(componentName)
+							.edit(element.name, element.element, element.id, value);
+					}
 				});
 
 				let add = $el.find('[data-grid-is-add]');

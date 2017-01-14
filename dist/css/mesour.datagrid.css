@@ -246,6 +246,9 @@
   padding-left: 5px;
   color: #c9302c; }
 
+.mesour-datagrid .editable-soft-reset {
+  z-index: 50; }
+
 .mesour-datagrid .mesour-select-checkbox, .mesour-datagrid .mesour-main-checkbox {
   padding: 2px; }
   .mesour-datagrid .mesour-select-checkbox.btn-indeterminate, .mesour-datagrid .mesour-main-checkbox.btn-indeterminate {

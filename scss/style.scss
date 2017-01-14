@@ -31,6 +31,9 @@ $color_tapa_approx: #747474;
 }
 
 .mesour-datagrid {
+  .editable-soft-reset {
+    z-index: 50;
+  }
   .mesour-select-checkbox, .mesour-main-checkbox {
     padding: 2px;
     &.btn-indeterminate {
