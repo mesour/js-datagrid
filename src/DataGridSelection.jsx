@@ -50,11 +50,11 @@ export default class DataGridSelection
 		let CallbackManager = function () {
 			let currentName, items;
 
-			this.setName = function (newName) {
+			this.setName = (newName) => {
 				currentName = newName;
 			};
 
-			this.setItems = function (newItems) {
+			this.setItems = (newItems) => {
 				items = newItems;
 			};
 
@@ -66,7 +66,7 @@ export default class DataGridSelection
 						matchCount++;
 					}
 				}
-				let button = $('[' + this.dropDownAttr + '="' + currentName + '"]').children('button'),
+				let button = $('[' + _this.dropDownAttr + '="' + currentName + '"]').children('button'),
 					counter = button.find('[data-selection-counter]');
 				if (!counter.is('*')) {
 					counter = $('<span data-selection-counter="1"></span>');
