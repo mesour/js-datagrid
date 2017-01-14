@@ -249,11 +249,6 @@
 .mesour-datagrid .editable-soft-reset {
   z-index: 50; }
 
-.mesour-datagrid .mesour-select-checkbox, .mesour-datagrid .mesour-main-checkbox {
-  padding: 2px; }
-  .mesour-datagrid .mesour-select-checkbox.btn-indeterminate, .mesour-datagrid .mesour-main-checkbox.btn-indeterminate {
-    padding: 2px; }
-
 .mesour-datagrid .mesour-datagrid-filter .mesour-filter {
   margin-bottom: 15px; }
 
