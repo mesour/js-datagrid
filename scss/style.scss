@@ -34,8 +34,10 @@ $color_tapa_approx: #747474;
   .editable-soft-reset {
     z-index: 50;
   }
-  .mesour-datagrid-filter .mesour-filter {
-    margin-bottom: 15px;
+  .mesour-datagrid-filter {
+    .mesour-simple-filter, .mesour-filter {
+      margin-bottom: 15px;
+    }
   }
   table {
     th {

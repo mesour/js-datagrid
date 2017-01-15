@@ -1,6 +1,6 @@
 {
   "name": "mesour-datagrid",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Mesour datagrid component",
   "main": "index.js",
   "devDependencies": {
@@ -33,6 +33,7 @@
     "mesour-core": "^0.1.0",
     "mesour-datetime": "^0.1.0",
     "mesour-modal": "^0.1.0",
+    "mesour-simple-filter": "^0.1.0",
     "mesour-filter": "^0.1.0",
     "mesour-editable": "^0.1.0",
     "mesour-validator": "^0.1.0",

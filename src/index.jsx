@@ -11,6 +11,7 @@ import Validator from 'mesour-validator/lib/Validator';
 import Selection from 'mesour-selection/lib/Selection';
 import Pager from 'mesour-pager/lib/Pager';
 import Filter from 'mesour-filter/lib/FilterWidget';
+import SimpleFilter from 'mesour-simple-filter/lib/SimpleFilter';
 
 import 'mesour-core/dist/mesour.min.js';
 
@@ -22,6 +23,7 @@ import 'mesour-core/dist/mesour.min.js';
 	mesour.createWidget('selection', new Selection(
 		mesour.selection && mesour.selection.userOptions ? mesour.selection.userOptions : {}
 	));
+	mesour.createWidget('simpleFilter', new SimpleFilter());
 	mesour.createWidget('filter', new Filter());
 	mesour.createWidget('editable', new Editable());
 	mesour.createWidget('popover', new Popover());
@@ -36,6 +38,7 @@ import './../node_modules/mesour-pager/sass/style.sass';
 import './../node_modules/mesour-editable/scss/style.scss';
 import './../node_modules/mesour-filter/scss/style.scss';
 import './../node_modules/mesour-selection/sass/style.sass';
+import './../node_modules/mesour-simple-filter/sass/style.sass';
 import './../scss/style.scss';
 
 export default DataGrid;

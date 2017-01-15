@@ -229,6 +229,10 @@
 
 .mesour-main-checkbox.btn-indeterminate {
   padding: 5px; }
+.input-group .form-control[data-simple-filter-query] {
+  float: right;
+  min-width: 150px;
+  max-width: 350px; }
 .mesour-datagrid table[data-mesour-enabled-filter="1"] > thead > tr > th > a:first-child, .mesour-datagrid table[data-mesour-enabled-filter="1"] > thead > tr > th > span:first-child {
   position: absolute;
   top: 0;
@@ -249,7 +253,7 @@
 .mesour-datagrid .editable-soft-reset {
   z-index: 50; }
 
-.mesour-datagrid .mesour-datagrid-filter .mesour-filter {
+.mesour-datagrid .mesour-datagrid-filter .mesour-simple-filter, .mesour-datagrid .mesour-datagrid-filter .mesour-filter {
   margin-bottom: 15px; }
 
 .mesour-datagrid table th .right-tools .dropdown.mesour-filter-dropdown button {
